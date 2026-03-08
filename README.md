@@ -269,22 +269,6 @@ O projeto usa a API do DeepSeek para:
 ### Arquivo bloq.txt não encontrado
 - Crie o arquivo `src/bloq.txt` com palavras bloqueadas separadas por vírgula
 
-## 📊 Estatísticas
-
-- **Personagens únicos**: ~375
-- **Total de interações**: ~500.000
-- **Temporadas**: 8
-- **Episódios**: 73
-
-## 🎯 Casos de Uso
-
-- Análise de redes sociais
-- Visualização de grafos de personagens
-- Análise de centralidade e importância
-- Detecção de comunidades
-- Estudo de protagonismo
-- Machine Learning em narrativas
-
 ## 📝 Licença
 
 Projeto acadêmico
