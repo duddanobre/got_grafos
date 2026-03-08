@@ -2,6 +2,48 @@
 
 Projeto de análise de dados dos scripts de Game of Thrones, gerando datasets de personagens e suas interações ao longo das 8 temporadas.
 
+## 📊 Visualizações dos Grafos
+
+### 📓 **Para visualizar os grafos e análises completas, abra os notebooks:**
+
+```bash
+jupyter notebook notebooks/visualizacao_grafos.ipynb
+jupyter notebook notebooks/analise_centralidade_final.ipynb
+```
+
+### Grafo Top 20 Personagens
+
+![Grafo Top 20](saidas/grafo_interacoes.png)
+
+**Características:**
+- Nós: Tamanho proporcional à importância
+- Cores: Gradiente de importância (amarelo → vermelho)
+- Arestas: Espessura proporcional à frequência
+
+---
+
+### Grafo Completo com Comunidades Coloridas
+
+![Grafo Comunidades](saidas/grafo_completo_comunidades.png)
+
+**Características:**
+- 🎨 **Cores:** Cada cor = uma comunidade diferente
+- 📊 **Tamanho:** Proporcional ao peso total de interações
+- 🎯 **Algoritmo:** Louvain (detecção automática de comunidades)
+
+---
+
+### Grafo com Comunidades Agrupadas
+
+![Grafo Agrupado](saidas/grafo_completo_comunidades_agrupado.png)
+
+**Características:**
+- 🔵 **Arestas cinzas:** Interações dentro da comunidade
+- 🔴 **Arestas vermelhas tracejadas:** Interações entre comunidades
+- 🎯 **Layout:** Comunidades dispostas em círculo
+
+---
+
 ## 📋 Descrição
 
 Este projeto processa os scripts completos de Game of Thrones para:
@@ -12,6 +54,18 @@ Este projeto processa os scripts completos de Game of Thrones para:
 - Analisar métricas de centralidade e importância
 
 ## 🚀 Início Rápido
+
+### 📝 **IMPORTANTE: Visualização dos Resultados**
+
+Para visualizar os grafos e análises completas:
+
+```bash
+# Abrir notebook com visualizações dos grafos
+jupyter notebook notebooks/visualizacao_grafos.ipynb
+
+# Abrir notebook com análise de centralidade
+jupyter notebook notebooks/analise_centralidade_final.ipynb
+```
 
 ### Pré-requisitos
 ```bash
@@ -39,8 +93,20 @@ python src/03_extrair_interacoes.py
 # 4. Criar e visualizar grafo de interações
 python src/04_criar_grafo.py
 
-# 5. Análise de centralidade (opcional)
+# 5. Gerar grafos completos com comunidades
+python src/05_grafo_completo.py
+
+# 6. Análise de centralidade
 python src/analise_centralidade.py
+```
+
+### 📊 Visualizar Resultados
+
+Após executar os scripts, abra os notebooks para visualizar:
+
+```bash
+jupyter notebook notebooks/visualizacao_grafos.ipynb
+jupyter notebook notebooks/analise_centralidade_final.ipynb
 ```
 
 ## 📖 Guia Detalhado de Inicialização
@@ -168,9 +234,13 @@ got_grafos/
 │   ├── 02_identificar_duplicados.py # Identifica variações (IA)
 │   ├── 03_extrair_interacoes.py    # Gera interações
 │   ├── 04_criar_grafo.py           # Cria e visualiza grafo
+│   ├── 05_grafo_completo.py        # Grafos completos com comunidades
 │   ├── analise_centralidade.py     # Análise de métricas
 │   └── bloq.txt                    # Palavras bloqueadas
 ├── notebooks/                      # Jupyter notebooks
+│   ├── visualizacao_grafos.ipynb   # 📊 Visualização dos grafos
+│   └── analise_centralidade_final.ipynb # 🎯 Análise completa
+├── saidas/                         # Imagens dos grafos gerados
 └── README.md                       # Este arquivo
 ```
 
